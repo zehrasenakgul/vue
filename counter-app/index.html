@@ -14,23 +14,20 @@
 </head>
 
 <body>
+
     <div id="app">
         <div class="container">
             <div class="row mt-5">
-                <div class="col-4 offset-4">
-                    <h3 class="text-center">Event</h3>
-                    <input type="text" class="form-control" @input="updateValue" :value="fullName">
-                    {{fullName}}
-                    <br>
-                    <!-- v-model -->
-                    <input v-model="fullName" type="text" class="form-control">
-                    <button class="btn btn-success btn-sm mt-2">Ekle</button>
+                <div class="col-2 card p-2">
+                    <h3>{{counter}}</h3>
+                    <div class="justify-content-center align-items-center">
+                        <button class="btn btn-sm btn-warning" @click="plus">+</button>
+                        <button class="btn btn-sm btn-danger" @click="minus">-</button>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
-
     <script src="app.js"></script>
 
 </body>
