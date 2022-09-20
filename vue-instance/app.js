@@ -21,10 +21,16 @@ const app = Vue.createApp({
       this.title = pTitle;
     },
     updateCoords(event) {
-      console.log(event.x, event.y);
+      //   console.log(event.x, event.y);
       this.coords = {
         x: event.x,
         y: event.y,
+      };
+    },
+    resetCoords() {
+      this.coords = {
+        x: 0,
+        y: 0,
       };
     },
   },

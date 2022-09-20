@@ -17,7 +17,8 @@
         <a :target="link.blank" :href="link.url" v-bind:alt="link.alt">{{link.content}}</a>
         <br><br>
         <button v-on:click="changeTitle('Title değiştirildi')">Title değiştir</button>
-        <div @mousemove="updateCoords" id="box" @click="changeTitle('Title box tarafından değiştirildi')"></div>
+        <div @mouseout="resetCoords" @mousemove="updateCoords" id="box"
+            @click="changeTitle('Title box tarafından değiştirildi')"></div>
         <span>{{coords.x}},{{coords.y}}</span>
     </div>
     <script src="app.js"></script>
