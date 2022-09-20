@@ -12,4 +12,10 @@ const app = Vue.createApp({
       this.counter--;
     },
   },
+  computed: {
+    getCounterResult() {
+      console.log("Counter çalıştı");
+      return this.counter > 5 ? "5'ten Büyük" : "5'ten Küçük";
+    },
+  },
 }).mount("#app");
