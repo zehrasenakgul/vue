@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 m-auto mt-5">
+                    <button @click="showContainer =! showContainer" class="btn btn-primary">Aç/Kapat</button>
+                    <h1 v-if="!showContainer" class="text-danger">Başlangıçta gözükecek</h1>
+                    <!-- bu durumda v-if yerine else de kullanılabilir -->
+                    <h1 v-if="showContainer" class="text-success">Sonra gözükecek</h1>
+                    <hr>
+                    <h2 :class="counterBoxClasses">{{counter}}</h2>
+                    <button class=" btn btn-sm btn-success" @click="counter++">Artır</button>
+                    <button class="btn btn-sm btn-danger" @click="counter--">Azalt</button>
+                    <p v-if="counter < 0">Counter Negatif</p>
+                    <p v-else-if="counter > 0">Counter Pozitif</p>
+                    <p v-else>Counter 0</p>
+                    <hr>
+                    <p v-show="counter < 0">Counter Negatif</p>
+                    <p v-show="counter > 0">Counter Pozitif</p>
+                    <p v-show="counter == 0">Counter 0</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
