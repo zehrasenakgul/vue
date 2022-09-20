@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <p>{{content}}</p>
+        <a :target="link.blank" :href="link.url" v-bind:alt="link.alt">{{link.content}}</a>
+        <br><br>
+        <button v-on:click="changeTitle('Title değiştirildi')">Title değiştir</button>
+        <div id="box" @click="changeTitle('Title box tarafından değiştirildi')"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
